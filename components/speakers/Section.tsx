@@ -1,17 +1,25 @@
 'use client'
-import styles from '@/app/page.module.css'
 import Carousel from '@/components/carousel/carousel'
 import Speakersbox from '@/components/common/Speakersbox'
 import Modal from '@/components/speakers/Modal'
 import { Speaker } from '@/sanity/schemas/speaker'
 import { useState } from 'react'
+import SectionTitle from '../common/sectionTitle'
+import styles from './section.module.css'
 
-export default function SpeakerCarousel(props: { speakers: Speaker[] }) {
+export default function SpeakerSection(props: { speakers: Speaker[] }) {
   const [showModal, setShowModal] = useState(false)
   const [currSpeaker, setCurrSpeaker] = useState<Speaker>()
 
   return (
     <div className={styles['section']}>
+      <SectionTitle
+        title="Speakers"
+        tag="Renowned"
+        image="/mic.png"
+        viewAllLink="/speakers"
+        viewAllText="View all speakers"
+      />
       <Modal
         showModal={showModal}
         setShowModal={setShowModal}

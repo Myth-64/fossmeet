@@ -1,9 +1,6 @@
-'use client'
-
 import styles from './PageTitle.module.css'
 
 export default function PageTitle({ imageSrc, title, tag }) {
-
   return (
     <div className={styles['page-title']}>
       <img src={imageSrc} className={styles['image']} />
@@ -14,5 +11,3 @@ export default function PageTitle({ imageSrc, title, tag }) {
     </div>
   )
 }
-
-

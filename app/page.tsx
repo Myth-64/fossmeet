@@ -4,7 +4,7 @@ import Sponsors from '@/components/sponsors/Sponsors'
 import { client } from '@/sanity/lib/client'
 import { Speaker } from '@/sanity/schemas/speaker'
 import Navbar from '../components/common/Navbar'
-import SpeakerCarousel from '../components/speakers/Carousel'
+import SpeakersSection from '../components/speakers/Section'
 
 export default async function Home() {
   const speakers = await client.fetch<Speaker[]>(
@@ -20,7 +20,7 @@ export default async function Home() {
     <div>
       <Navbar />
       <Hero />
-      <SpeakerCarousel speakers={speakers} />
+      <SpeakersSection speakers={speakers} />
       {/* <Slider /> */}
       <Sponsors />
       <Footer />
