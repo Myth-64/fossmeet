@@ -125,8 +125,9 @@ const SchedulePage = () => {
                         className='bigText
                                     font-inter
                                     text-4xl
-                                    font-semibold
-                                    md:text-5xl
+                                    font-bold
+                                    tracking-tighter
+                                    md:text-6xl
                                     
                     
                     '
