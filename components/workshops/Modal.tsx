@@ -1,7 +1,18 @@
-import Image from 'next/image';
-import ModalWrapper from '../common/ModalWrapper';
+import { urlForImage } from '@/sanity/lib/image'
+import { type Workshop } from '@/sanity/schemas/workshop'
+import Image from 'next/image'
+import { Dispatch, SetStateAction } from 'react'
+import ModalWrapper from '../common/ModalWrapper'
 
-const Modal = ({ showModal, setShowModal, currWorkshop }) => {
+const Modal = ({
+  showModal,
+  setShowModal,
+  currWorkshop,
+}: {
+  showModal: boolean
+  setShowModal: Dispatch<SetStateAction<boolean>>
+  currWorkshop: Workshop
+}) => {
   return (
     <ModalWrapper>
       {showModal && (
@@ -27,10 +38,9 @@ const Modal = ({ showModal, setShowModal, currWorkshop }) => {
 
           <div className="flex flex-col h-full w-full flex-wrap">
             <div className="h-2/3 w-full flex border-2 p-6 flex-col md:flex-row">
-              <div
-                className="w-[132] h-[140] flex-shrink-0">
+              <div className="w-[132] h-[140] flex-shrink-0">
                 <Image
-                  src={currWorkshop.image}
+                  src={urlForImage(currWorkshop.image)}
                   width={140}
                   height={140}
                   alt="workshop image"
@@ -42,11 +52,15 @@ const Modal = ({ showModal, setShowModal, currWorkshop }) => {
                     {currWorkshop.date}
                   </div>
                   <div className="h-2 w-2 bg-black rounded-full "></div>
-                  <p className="font-semibold text-sm">{currWorkshop.time}</p>
+                  <p className="font-semibold text-sm">
+                    {currWorkshop.duration} hrs
+                  </p>
                 </div>
-                <h1 className="text-xl sm:text-2xl font-bold mt-2">{currWorkshop.title}</h1>
+                <h1 className="text-xl sm:text-2xl font-bold mt-2">
+                  {currWorkshop.name}
+                </h1>
                 <p className="text-wrap mt-2 text-gray-500 text-sm sm:text-base">
-                  {currWorkshop.detail}
+                  {currWorkshop.description}
                 </p>
               </div>
             </div>
@@ -55,37 +69,30 @@ const Modal = ({ showModal, setShowModal, currWorkshop }) => {
                 <p className="text tracking-[0.25rem]  text-gray-600 uppercase text-sm font-medium">
                   Conducted by
                 </p>
-                <div
-                  className='flex items-center space-x-2 flex-wrap mt-2'
-                >
-                  <div
-                  >
+                <div className="flex items-center space-x-2 flex-wrap mt-2">
+                  <div>
                     <Image
-                      src={currWorkshop.organizerLogo}
+                      src={urlForImage(currWorkshop.conducted_by.logo)}
                       width={28}
                       height={28}
                       alt="organizer logo"
                     />
                   </div>
-                  <p className='font-medium'>{currWorkshop.organizer}</p>
-
+                  <p className="font-medium">
+                    {currWorkshop.conducted_by.name}
+                  </p>
                 </div>
-
               </div>
-              <div className=' py-4 p-3'>
+              <div className=" py-4 p-3">
                 <p className="text tracking-[0.25rem]  text-gray-600 uppercase text-sm mb-2 font-medium">
                   Hosts
                 </p>
-                <ul className='font-medium list-disc px-6'>
+                <ul className="font-medium list-disc px-6">
                   {currWorkshop.hosts.map((host, index) => (
-                    <li key={index}>
-                      {host}
-                    </li>
+                    <li key={index}>{host}</li>
                   ))}
                 </ul>
-
               </div>
-
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ export default async function Page() {
     {},
     {
       next: {
-        revalidate: 0,
+        revalidate: 60 * 60 * 24 * 7,
       },
     }
   )

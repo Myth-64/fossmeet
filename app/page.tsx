@@ -12,7 +12,7 @@ export default async function Home() {
     {},
     {
       next: {
-        revalidate: 0,
+        revalidate: 60 * 60 * 24 * 7,
       },
     }
   )
