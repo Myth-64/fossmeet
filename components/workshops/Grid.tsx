@@ -8,7 +8,7 @@ import Modal from './Modal'
 
 export default function WorkshopGrid(props: { workshops: Workshop[] }) {
   const [showModal, setShowModal] = useState(false)
-  const [currWorkshop, setCurrWorkshop] = useState({})
+  const [currWorkshop, setCurrWorkshop] = useState<Workshop>()
 
   return (
     <>
@@ -25,6 +25,7 @@ export default function WorkshopGrid(props: { workshops: Workshop[] }) {
                 setShowModal={setShowModal}
                 setCurrWorkshop={setCurrWorkshop}
                 workshop={workshop}
+                width=""
               />
             </div>
           ))}
