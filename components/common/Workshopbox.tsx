@@ -16,10 +16,12 @@ export default function Workshopbox({
 }) {
   return (
     <div className={styles['workshop-box']}>
-      <img
+      <Image
         src={urlForImage(workshop.image)}
         alt="Event poster"
         className={styles['poster']}
+        width={300}
+        height={200}
       />
 
       <div className={styles['content-box']}>

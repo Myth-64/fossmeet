@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import styles from './sectionTitle.module.css'
 export default function SectionTitle(props: {
@@ -11,7 +12,13 @@ export default function SectionTitle(props: {
     <div className={styles['section-title']}>
       <Link href={'/speakers'}>
         <div className={styles['wrapper']}>
-          <img src={props.image} className={styles['image']} />
+          <Image
+            src={props.image}
+            className={styles['image']}
+            alt="section-image"
+            width={100}
+            height={100}
+          />
           <div className={styles['text-wrapper']}>
             <span className={styles['tag']}>{props.tag}</span>
             <h1 className={styles['title']}>{props.title}</h1>
