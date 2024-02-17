@@ -29,7 +29,7 @@ const PutBg = ({ color, speakerImg }) => {
                         overflow-hidden
         `}
     >
-      <Image src={speakerImg} alt="" className="" />
+      <Image src={speakerImg} alt="" width={160} height={160} />
     </div>
   )
 }
