@@ -35,7 +35,7 @@ const Modal = ({
                 src={urlForImage(currSpeaker.image)}
                 width={80}
                 height={80}
-                className="w-[80px] h-[80px] sm:h-[135px] sm:w-[135px]"
+                className="w-auto h-[80px] sm:h-[135px] sm:w-auto"
                 alt="Atharv"
               />
               <h1 className="mt-2 font-bold text-xl sm:text-2xl">
