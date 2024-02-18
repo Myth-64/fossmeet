@@ -5,8 +5,10 @@ import 'plyr/dist/plyr.css'
 import { useEffect, useRef } from 'react'
 
 export default function VideoPlayer() {
+  // change this to streamId = process.env.LIVE_STREAM_KEY ( this is for test purposes only )
+  const streamId = 'live';
   const src =
-    'https://live-par-2-cdn-alt.livepush.io/live/bigbuckbunnyclip/index.m3u8'
+    'http://live.fosscell.org/hls/' + streamId + '.m3u8'
   const videoRef = useRef(null)
 
   useEffect(() => {
