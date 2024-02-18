@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from './Hero.module.css'
 
 export default function Hero() {
@@ -23,10 +24,12 @@ export default function Hero() {
               <span className={styles['item-text']}>Mar 15, 16, 17</span>
             </div>
           </div>
-          <button className={styles['cta-button']}>
-            <span>Register</span>
-            <img src="/arrow_right_alt.svg" alt="register link" />
-          </button>
+          <Link href={'https://www.townscript.com/e/fossmeet24-022332'}>
+            <button className={styles['cta-button']}>
+              <span>Register</span>
+              <img src="/arrow_right_alt.svg" alt="register link" />
+            </button>
+          </Link>
         </div>
         <Image
           src="/hero.svg"
