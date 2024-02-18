@@ -26,7 +26,7 @@ export default function Footer() {
                   <div className={styles['contact-item-text-wrapper']}>
                     <span className={styles['contact-item-title']}>Email</span>
                     <span className={styles['contact-item-value']}>
-                      fosscell@nitc.ac.in
+                      info@fossmeet.net
                     </span>
                   </div>
                 </div>
