@@ -15,14 +15,14 @@ const SchedulePage = ({ schedule }: { schedule: Schedule }) => {
   const day3Arr = []
 
   const map = {
-    '2024-03-15': day1Arr,
-    '2024-03-16': day2Arr,
-    '2024-03-17': day3Arr,
+    '2024-03-22': day1Arr,
+    '2024-03-23': day2Arr,
+    '2024-03-24': day3Arr,
   }
 
   for (const x of schedule) {
     for (const y of x.events) {
-      if (y.type == 'talk') {
+      if (y.type == 'speaker') {
         map[x.date].push({
           Img: true,
           eventName: y.title,
@@ -31,8 +31,7 @@ const SchedulePage = ({ schedule }: { schedule: Schedule }) => {
           img: urlForImage(y.speaker.image),
           color: 'green',
         })
-      }
-      if (y.type == 'workshop') {
+      } else if (y.type == 'workshop') {
         map[x.date].push({
           Img: true,
           eventName: y.title,

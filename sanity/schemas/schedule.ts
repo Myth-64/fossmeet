@@ -75,7 +75,7 @@ type Event = {
     type: 'workshop';
     workshop: Workshop;
 } | {
-    type: 'talk';
+    type: 'speaker';
     speaker: Speaker;
 })
 
