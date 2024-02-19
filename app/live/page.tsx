@@ -7,7 +7,7 @@ export default function VideoPlayer() {
   // change this to streamId = process.env.LIVE_STREAM_KEY ( this is for test purposes only )
   const streamId = 'live';
   const src =
-    'https://live.fosscell.org/hls/' + streamId + '.m3u8'
+    'https://live.fosscell.org/hls/' + streamId + '/index.m3u8'
   const videoRef = useRef(null)
 
   async function loadVideo() {
