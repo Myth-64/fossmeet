@@ -1,12 +1,13 @@
 'use client'
-import Hls from 'hls.js'
-import 'plyr/dist/plyr.css'
-import { useEffect, useRef } from 'react'
+import Hls from 'hls.js';
+import 'plyr/dist/plyr.css';
+import { useEffect, useRef } from 'react';
 
 export default function VideoPlayer() {
   // change this to streamId = process.env.LIVE_STREAM_KEY ( this is for test purposes only )
-  const streamId = 'live'
-  const src = 'http://live.fosscell.org/hls/' + streamId + '.m3u8'
+  const streamId = 'live';
+  const src =
+    'https://live.fosscell.org/hls/' + streamId + '.m3u8'
   const videoRef = useRef(null)
 
   async function loadVideo() {
