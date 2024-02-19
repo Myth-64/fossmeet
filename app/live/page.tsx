@@ -1,20 +1,18 @@
 'use client'
 import Hls from 'hls.js'
-import Plyr from 'plyr'
 import 'plyr/dist/plyr.css'
 import { useEffect, useRef } from 'react'
 
 export default function VideoPlayer() {
   // change this to streamId = process.env.LIVE_STREAM_KEY ( this is for test purposes only )
-  const streamId = 'live';
-  const src =
-    'http://live.fosscell.org/hls/' + streamId + '.m3u8'
+  const streamId = 'live'
+  const src = 'http://live.fosscell.org/hls/' + streamId + '.m3u8'
   const videoRef = useRef(null)
 
-  useEffect(() => {
+  async function loadVideo() {
     const video = videoRef.current
     if (!video) return
-
+    const Plyr = await (await import('plyr')).default
     video.controls = true
     const defaultOptions = {}
     if (video.canPlayType('application/vnd.apple.mpegurl')) {
@@ -32,6 +30,10 @@ export default function VideoPlayer() {
         'This is an old browser that does not support MSE https://developer.mozilla.org/en-US/docs/Web/API/Media_Source_Extensions_API'
       )
     }
+  }
+
+  useEffect(() => {
+    loadVideo()
   }, [src, videoRef])
 
   return (
