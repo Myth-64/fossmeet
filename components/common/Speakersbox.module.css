@@ -1,98 +1,99 @@
 .speaker-box {
-  display: flex;
-  flex-direction: column;
-  width: 330px;
-  border: var(--stroke);
+	display: flex;
+	flex-direction: column;
+	width: 330px;
+	border: var(--stroke);
+	background-color: #fff;
 }
 
 .content-box {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  gap: 16px;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	gap: 16px;
 }
 
 .speaker-image {
-  width: 135px;
-  height: 135px;
-  flex-shrink: 0;
-  border-radius: 1000px;
-  object-fit: cover;
-  object-position: center;
+	width: 135px;
+	height: 135px;
+	flex-shrink: 0;
+	border-radius: 1000px;
+	object-fit: cover;
+	object-position: center;
 }
 
 .speaker-name {
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: -1px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: -1px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .speaker-description {
-  height: 60px;
-  font-size: 15px;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.4);
-  line-height: 130%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* number of lines to show */
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
+	height: 60px;
+	font-size: 15px;
+	font-weight: 500;
+	color: rgba(0, 0, 0, 0.4);
+	line-height: 130%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3; /* number of lines to show */
+	line-clamp: 3;
+	-webkit-box-orient: vertical;
 }
 
 .bottom-btns {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
 }
 
 .bottom-icons {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
 }
 
 .bottom-icons img {
-  width: 24px;
-  height: 24px;
+	width: 24px;
+	height: 24px;
 }
 
 .view-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 46px;
-  height: 46px;
-  border-radius: 100px;
-  border: var(--stroke);
-  box-shadow: var(--shadow);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 46px;
+	height: 46px;
+	border-radius: 100px;
+	border: var(--stroke);
+	box-shadow: var(--shadow);
 }
 
 .talk-box {
-  display: flex;
-  background-color: black;
-  padding: 8px 12px;
-  padding-top: 10px;
-  gap: 10px;
-  line-height: 1.2;
+	display: flex;
+	background-color: black;
+	padding: 8px 12px;
+	padding-top: 10px;
+	gap: 10px;
+	line-height: 1.2;
 }
 
 .talk-text {
-  color: white;
-  font-weight: 500;
-  font-size: 13px;
-  letter-spacing: 1px;
+	color: white;
+	font-weight: 500;
+	font-size: 13px;
+	letter-spacing: 1px;
 }
 
 .talk-type {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
-  flex: 1;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 14px;
+	flex: 1;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
