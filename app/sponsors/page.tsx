@@ -3,8 +3,6 @@ import PageTitle from '@/components/common/PageTitle'
 import Footer from '@/components/footer/Footer'
 import styles from './page.module.css'
 
-export const revalidate = 3600
-
 export default async function Page() {
   return (
     <>

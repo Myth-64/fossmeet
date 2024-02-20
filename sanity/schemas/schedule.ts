@@ -69,7 +69,7 @@ export type Schedule = {
 }[]
 
 type Event = {
-    title?: string;
+    title: string;
     time: string;
 } & ({
     type: 'workshop';
@@ -77,7 +77,7 @@ type Event = {
 } | {
     type: 'speaker';
     speaker: Speaker;
-})
+} | { type: '' })
 
 
 
