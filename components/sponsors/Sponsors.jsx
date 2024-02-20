@@ -1,8 +1,7 @@
-import { Sponsor } from '@/app/sponsors/page';
+import styles2 from '@/app/sponsors/page.module.css';
 import SectionTitle from '@/components/common/sectionTitle';
 import styles from './Sponsors.module.css';
-
-export default function sponsors() {
+export default function Sponsors() {
 	return (
 		<div className='outer-margin'>
 			<div className='inner-margin'>
@@ -29,5 +28,34 @@ export default function sponsors() {
 				</div>
 			</div>
 		</div>
+	)
+}
+
+
+export function Sponsor({ link, imgSrc, dotColor, name, tier }) {
+	return (
+		<a href={link} target="_blank" rel="noreferrer noopener">
+			<div className={styles2['sponsor']}>
+				<div className={styles2['logo-container']}>
+					<img
+						src={imgSrc}
+						alt="company-logo"
+						className={styles2['company-logo']}
+					// width={100}
+					// height={100}
+					/>
+				</div>
+				<div className={styles2['sponsor-bottom']}>
+					<div className=" flex items-center gap-[8px]">
+						<div
+							className={styles['circle']}
+							style={{ backgroundColor: dotColor }}
+						></div>
+						<span className={styles2['company-name']}>{name}</span>
+					</div>
+					<div className={styles2['tier']}>{tier}</div>
+				</div>
+			</div>
+		</a>
 	)
 }
