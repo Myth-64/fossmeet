@@ -21,7 +21,7 @@ export default function Hero() {
               <div className={styles['circle']}>
                 <img src="/Calendar.svg" alt="Location" />
               </div>
-              <span className={styles['item-text']}>Mar 15, 16, 17</span>
+              <span className={styles['item-text']}>Mar 22, 23, 24</span>
             </div>
           </div>
           <Link href={'https://www.townscript.com/e/fossmeet24-022332'}>
