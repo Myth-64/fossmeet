@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>FOSS&apos;24 – FOSSCell, NIT Calicut</title>
+        <title>FOSSMeet&apos;24 – FOSSCell, NIT Calicut</title>
         <link rel="icon" href="/favicon.png" sizes="any" />
         <meta property="og:image" content="/embed-logo.png"></meta>
       </head>
