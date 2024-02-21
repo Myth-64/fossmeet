@@ -37,13 +37,13 @@ function Carousel({ children }) {
     }
   }, [])
   const slidesToShow = windowWidth > 768 ? 3 : 1
-
+  const slidesToScroll = windowWidth > 768 ? 3 : 1
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: slidesToShow,
-    slidesToScroll: 2,
+    slidesToScroll: slidesToScroll,
     prevArrow: (
       <PrevArrow
         onClick={function (

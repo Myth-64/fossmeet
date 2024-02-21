@@ -68,4 +68,7 @@ html {
   .inner-margin {
     padding: 0;
   }
+  .slick-dots li {
+    margin: 0 !important;
+  }
 }
