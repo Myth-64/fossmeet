@@ -3,68 +3,69 @@
 @tailwind utilities;
 
 :root {
-	--stroke: 2px solid #000;
-	--shadow: 2px 2px 0 #000;
-	--orange: #ff8b4a;
-	--orange-dark: #fa7225;
-	--default-transition: 0.15s ease all;
+  --stroke: 2px solid #000;
+  --shadow: 2px 2px 0 #000;
+  --orange: #ff8b4a;
+  --orange-dark: #fa7225;
+  --default-transition: 0.15s ease all;
 }
 
 html {
-	min-width: 390px;
-	scroll-behavior: smooth;
+  min-width: 390px;
+  scroll-behavior: smooth;
 }
 
 .section-spacer {
-	height: 150px;
+  height: 150px;
 }
 
 .custom-arrow {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	align-items: center;
-	justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  align-items: center;
+  justify-content: center;
+  display: none;
 }
 
 .custom-prev {
-	left: 1px;
-	z-index: 1;
+  left: 1px;
+  z-index: 1;
 }
 
 .custom-next {
-	right: 1px;
-	z-index: 1;
+  right: 1px;
+  z-index: 1;
 }
 
 .slick-slide > div {
-	justify-content: center;
-	align-items: center;
-	display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .slick-arrow {
-	background-color: aqua;
+  background-color: aqua;
 }
 
 .slick-prev {
-	background-color: aqua;
+  background-color: aqua;
 }
 
 .outer-margin {
-	padding: 0 clamp(16px, 7vw, 100px);
-	max-width: 1440px;
-	margin: 0 auto;
-	width: 100%;
+  padding: 0 clamp(16px, 7vw, 100px);
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .inner-margin {
-	width: 100%;
-	padding: 0 clamp(16px, 7vw, 92px);
+  width: 100%;
+  padding: 0 clamp(16px, 7vw, 92px);
 }
 
 @media (max-width: 700px) {
-	.inner-margin {
-		padding: 0;
-	}
+  .inner-margin {
+    padding: 0;
+  }
 }
